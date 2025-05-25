@@ -501,4 +501,50 @@ a:hover {
         width: 8px;
         height: 8px;
     }
+
+    /* Responsive Carousel */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        height: 45vh;
+        margin-top: 30px;
+    }
+
+    .carousel-item {
+        padding: 10px;
+    }
+
+    .carousel-item img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: var(--border-radius);
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        height: 40vh;
+        border-radius: 0;
+        margin-top: 20px;
+    }
+
+    .carousel-item {
+        padding: 5px;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+        background-color: rgba(var(--primary-color-rgb), 0.6);
+        color: #fff;
+        border-radius: 50%;
+    }
+}
+
 }
