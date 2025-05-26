@@ -236,6 +236,61 @@ a:hover {
     animation: fadeIn 1.8s ease-in-out forwards;
 }
 
+#fondatore {
+  background-color: var(--background-light); /* sfondo chiaro e uniforme */
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 80px auto; /* centratura orizzontale con margine inferiore */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.8s ease forwards; /* animazione fade-in */
+}
+
+#fondatore h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.foto-fondatore {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .foto-fondatore {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.foto-fondatore:hover {
+  transform: scale(1.05);
+}
+
+#fondatore p {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Animazione semplice per fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .product-intro-image {
     max-width: 100%;
     height: auto;
@@ -502,49 +557,5 @@ a:hover {
         height: 8px;
     }
 
-    /* Responsive Carousel */
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        height: 45vh;
-        margin-top: 30px;
-    }
-
-    .carousel-item {
-        padding: 10px;
-    }
-
-    .carousel-item img {
-        max-width: 90%;
-        max-height: 90%;
-        object-fit: contain;
-        border-radius: var(--border-radius);
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-wrapper {
-        height: 40vh;
-        border-radius: 0;
-        margin-top: 20px;
-    }
-
-    .carousel-item {
-        padding: 5px;
-    }
-
-    .carousel-item img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .carousel-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2em;
-        background-color: rgba(var(--primary-color-rgb), 0.6);
-        color: #fff;
-        border-radius: 50%;
-    }
-}
-
+    
 }
