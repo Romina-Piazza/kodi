@@ -1,22 +1,18 @@
 /* Palette Colori e Variabili Globali (Lussuosa ed Elegante) */
 :root {
-    --primary-color: #6C5B7B;   /* Viola-grigio profondo e sofisticato */
-    --secondary-color: #8D8B97; /* Grigio ardesia morbido per sfumature */
-    --accent-color: #C06C84;    /* Rosa malva polveroso per accenti caldi */
-    --text-dark: #2A2A2A;       /* Nero quasi puro per testi importanti */
-    --text-light: #5A5A5A;      /* Grigio scuro per testi secondari */
-    --background-light: #FDFDFD; /* Bianco crema, leggermente caldo */
-    --background-white: #FFFFFF; /* Bianco puro per contrasto */
-    --shadow-subtle: rgba(0, 0, 0, 0.05); /* Ombra molto delicata */
-    --transition-speed: 0.5s; /* Velocità base per le transizioni */
+    --primary-color: #6C5B7B;
+    --secondary-color: #8D8B97;
+    --accent-color: #C06C84;
+    --text-dark: #2A2A2A;
+    --text-light: #5A5A5A;
+    --background-light: #FDFDFD;
+    --background-white: #FFFFFF;
+    --shadow-subtle: rgba(0, 0, 0, 0.05);
+    --transition-speed: 0.5s;
     --border-radius: 8px;
-
-    /* Per la trasparenza della navbar hover */
-    --primary-color-rgb: 108, 91, 123; /* Valori RGB di --primary-color */
-    --accent-color-rgb: 192, 108, 132; /* Valori RGB di --accent-color */
+    --primary-color-rgb: 108, 91, 123;
+    --accent-color-rgb: 192, 108, 132;
 }
-
-/* ... keep existing code (all global styles, header, navbar, hero section, product intro card styles) */
 
 /* Stili Globali */
 body {
@@ -501,6 +497,66 @@ a:hover {
         width: 8px;
         height: 8px;
     }
+}
 
-    
+/* --- KOD-I FLEX LAYOUT --- */
+.kod-i-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: center;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.kod-i-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+.kod-i-image {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kod-i-title {
+  text-align: center;
+  font-size: 2.7em;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.kod-i-image img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+.kod-i-description {
+  flex: 1 1 350px;
+  max-width: 700px;
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .kod-i-flex,
+  .kod-i-flex.reverse {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .kod-i-description {
+    padding-left: 0;
+    max-width: 100%;
+  }
+  .kod-i-image {
+    margin-bottom: 1rem;
+  }
 }
